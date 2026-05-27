@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Welkom bij Jungletuin</title>
+  <meta name="description" content="Ontdek hoe je een tropische jungletuin aanleggen in Nederland. Inspiratie, tips, plantensuggesties en een interactieve kaart met locaties.">
+  <meta name="keywords" content="jungletuin aanleggen, tropische tuin Nederland, jungle tuin, exotische planten tuin">
+
+  <!-- Open Graph voor sociale media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jungletuin.nl/">
+  <meta property="og:title" content="Jungletuin aanleggen in Nederland | Jungletuin">
+  <meta property="og:description" content="Ontdek hoe je een tropische jungletuin aanleggen in Nederland. Inspiratie, tips en plantensuggesties.">
+  <meta property="og:image" content="https://jungletuin.nl/images/og-home.webp">
+  <meta property="og:locale" content="nl_NL">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500&display=swap">
+
+  <!-- Vite entry point (bevat Tailwind CSS en alle JavaScript) -->
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="bg-background text-text-main font-body">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+      <a href="index.html" class="font-heading font-bold text-xl text-jungle-primary">
+        Jungletuin
+      </a>
+
+      <!-- Hamburger knop (zichtbaar op mobiel) -->
+      <button
+        id="nav-toggle"
+        class="md:hidden p-2 rounded text-text-main hover:text-jungle-primary"
+        aria-label="Menu openen of sluiten"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Desktop navigatie -->
+      <nav class="hidden md:flex gap-6">
+        <a href="index.html" class="font-medium bg-jungle-primary text-white px-3 py-1 rounded" aria-current="page">Home</a>
+        <a href="eigen.html" class="font-medium hover:text-jungle-primary">Eigen jungletuin</a>
+        <a href="contact.html" class="font-medium hover:text-jungle-primary">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Mobiele navigatie (inklapbaar) -->
+    <nav id="nav-mobile" class="md:hidden bg-white border-t border-gray-200 px-4 py-3">
+      <ul class="flex flex-col gap-3">
+        <li><a href="index.html" class="block font-medium bg-jungle-primary text-white px-3 py-1 rounded inline-block" aria-current="page">Home</a></li>
+        <li><a href="eigen.html" class="block font-medium hover:text-jungle-primary">Eigen jungletuin</a></li>
+        <li><a href="contact.html" class="block font-medium hover:text-jungle-primary">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HERO SECTIE -->
+    <section class="hero-section py-20 md:py-28 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 max-w-2xl leading-tight">
+          Jungletuin aanleggen in Nederland
+        </h1>
+        <p class="text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
+          Ontdek de tropische sfeer in je eigen achtertuin. Van weelderige bladeren tot bamboe en bananenplanten. Wij inspireren jou.
+        </p>
+        <a
+          href="eigen.html"
+          class="inline-block bg-white text-jungle-primary font-semibold px-8 py-4 rounded hover:bg-green-50 text-base"
+        >
+          Ontdek meer
+        </a>
+      </div>
+    </section>
+
+    <!-- INLEIDING SECTIE -->
+    <section class="py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="font-heading font-bold text-jungle-primary mb-4">
+          Wat is een jungletuin?
+        </h2>
+        <p class="text-base leading-relaxed max-w-3xl border-l-4 border-jungle-primary pl-4">
+          Een jungletuin is een tuin vol weelderige, tropische en exotische planten die samen een dichte, groene sfeer creëren.
+          Denk aan grote bladeren, bamboegras, gunnera manicata en winterharde bananenplanten soorten die ook in het Nederlandse
+          klimaat prima bloeien. Een jungletuin aanleggen is makkelijker dan het lijkt: met de juiste plantenkeuze en een
+          doordacht ontwerp geniet je het hele jaar van een tropisch paradijs in je eigen tuin.
+        </p>
+        <a
+          href="eigen.html"
+          class="inline-block mt-6 text-jungle-primary font-semibold hover:text-jungle-dark underline"
+        >
+          Bekijk hoe je jungletuin planten voor Nederland kiest →
+        </a>
+      </div>
+    </section>
+
+    <!-- SLIDER / GALERIJ SECTIE -->
+    <section class="py-14 bg-background">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="font-heading font-bold text-jungle-primary mb-6">
+          Laat je inspireren
+        </h2>
+
+        <!-- Slider container -->
+        <div id="slider" class="relative rounded-lg overflow-hidden h-[300px] md:h-[420px] bg-green-100 border-2 border-green-200">
+
+          <!-- Slide 1 -->
+          <figure class="slide">
+            <img
+              src="/images/slider-1.webp"
+              alt="Weelderige jungletuin met grote tropische bladeren en bamboegras"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+            <figcaption class="absolute bottom-0 left-0 right-0 bg-black/50 text-white px-6 py-3 text-sm">
+              een typische jungletuin sfeer
+            </figcaption>
+          </figure>
+
+          <!-- Slide 2 -->
+          <figure class="slide">
+            <img
+              src="/images/slider-2.webp"
+              alt="Groene jungleachtige tuin met grote varens en schaduwplanten"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+            <figcaption class="absolute bottom-0 left-0 right-0 bg-black/50 text-white px-6 py-3 text-sm">
+              Varens en schaduwplanten voor een dichte jungle sfeer
+            </figcaption>
+          </figure>
+
+          <!-- Slide 3 -->
+          <figure class="slide">
+            <img
+              src="/images/slider-3.webp"
+              alt="Exotische planten in een Nederlandse tuin met een sfeervol pad"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+            <figcaption class="absolute bottom-0 left-0 right-0 bg-black/50 text-white px-6 py-3 text-sm">
+              Sfeervol pad door een groene oase
+            </figcaption>
+          </figure>
+
+          <!-- Slide 4 -->
+          <figure class="slide">
+            <img
+              src="/images/slider-4.webp"
+              alt="Tropisch aandoende tuin met hoge bomen en dichte ondergroei"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+            <figcaption class="absolute bottom-0 left-0 right-0 bg-black/50 text-white px-6 py-3 text-sm">
+              Tropisch aandoende tuin met layering van hoog naar laag
+            </figcaption>
+          </figure>
+
+          <!-- Slide 5 -->
+          <figure class="slide">
+            <img
+              src="/images/slider-5.webp"
+              alt="Tropisch kasgebouw van Hortus Botanicus Amsterdam vol weelderige planten en palmen"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+            <figcaption class="absolute bottom-0 left-0 right-0 bg-black/50 text-white px-6 py-3 text-sm">
+              Tropische plantenkas
+            </figcaption>
+          </figure>
+
+          <!-- Slide 6 -->
+          <figure class="slide">
+            <img
+              src="/images/slider-6.webp"
+              alt="Weelderige tropische achtertuin met bananenplant en grote groene bladeren"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+            <figcaption class="absolute bottom-0 left-0 right-0 bg-black/50 text-white px-6 py-3 text-sm">
+              Tropische achtertuin met bananenplant en colocasia
+            </figcaption>
+          </figure>
+
+          <!-- Navigatieknoppen links/rechts -->
+          <button
+            id="slide-prev"
+            class="absolute left-3 top-1/2 -translate-y-1/2 bg-white text-jungle-primary rounded-full w-10 h-10 flex items-center justify-center z-10 border-2 border-green-200"
+            aria-label="Vorige afbeelding"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+
+          <button
+            id="slide-next"
+            class="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-jungle-primary rounded-full w-10 h-10 flex items-center justify-center z-10 border-2 border-green-200"
+            aria-label="Volgende afbeelding"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dots navigatie -->
+        <div class="flex justify-center gap-3 mt-4">
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- KAART SECTIE -->
+    <section class="py-10 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="font-heading font-bold text-jungle-primary mb-2">
+          Jungletuinen in Nederland
+        </h2>
+        <p class="text-base text-gray-600 mb-5">
+          Bekijk inspiratielocaties van bijzondere jungletuinen verspreid door heel Nederland.
+          Klik op een marker voor meer informatie.
+        </p>
+        <div id="home-map" class="rounded-lg overflow-hidden border-2 border-green-200" aria-label="Interactieve kaart met jungletuinlocaties in Nederland"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-earth text-white py-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-8">
+      <div>
+        <strong class="font-heading text-xl block mb-2">Jungletuin</strong>
+        <p class="text-green-100 text-sm">
+          Tropische tuinen aanleggen in Nederland.<br>
+          Inspiratie, advies en planten voor jouw jungletuin.
+        </p>
+      </div>
+
+      <nav>
+        <h3 class="font-heading font-semibold text-sm uppercase tracking-wider text-green-300 mb-3">Navigatie</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-jungle-light">Home</a></li>
+          <li><a href="eigen.html" class="hover:text-jungle-light">Jungletuin planten voor Nederland</a></li>
+          <li><a href="contact.html" class="hover:text-jungle-light">Jungletuin laten aanleggen</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 mt-8 pt-4 border-t border-gray-600 flex flex-col md:flex-row justify-between gap-2 text-green-200 text-xs">
+      <span>&copy; 1998-2025 Frits de F company / Jungletuinen.nl</span>
+      <span>Alle rechten onvoorwaardelijk voorbehouden</span>
+    </div>
+  </footer>
+
+</body>
+</html>
