@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frontend-keuzedeel-7w7qf9zwu-greyson320s-projects.vercel.app/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /node_modules/
-Disallow: /src/
-
-Sitemap: https://jungletuin.nl/sitemap.xml
