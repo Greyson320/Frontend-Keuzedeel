@@ -77,13 +77,28 @@
   background-color: #2E7D32;
 }
 
+/* Navbar altijd boven Leaflet kaart (Leaflet gebruikt z-index tot 800) */
+header {
+  z-index: 1000;
+}
+
 /* Leaflet kaartcontainers */
 #home-map {
-  height: 420px;
+  height: 200px;
 }
 
 #contact-map {
-  height: 220px;
+  height: 160px;
+}
+
+@media (min-width: 768px) {
+  #home-map {
+    height: 420px;
+  }
+
+  #contact-map {
+    height: 220px;
+  }
 }
 
 /* Contactformulier invoervelden */
